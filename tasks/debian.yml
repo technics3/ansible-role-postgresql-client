@@ -17,7 +17,7 @@
   become: true
   ansible.builtin.apt_repository:
     codename: "{{ ansible_distribution_release }}"
-    repo: "deb [signed-by=/etc/apt/keyrings/postgresql.asc] http://apt.postgresql.org/pub/repos/apt/{{ ansible_distribution_release }}-pgdg main"
+    repo: "deb [signed-by=/etc/apt/keyrings/postgresql.asc] http://apt.postgresql.org/pub/repos/apt {{ ansible_distribution_release }}-pgdg main"
 
 - name: Postgres | install client packages
   become: true
