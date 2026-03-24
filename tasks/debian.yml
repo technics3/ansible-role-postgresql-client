@@ -12,7 +12,6 @@
   ansible.builtin.get_url:
     url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
     dest: /etc/apt/keyrings/postgresql.asc
-    state: present
 
 - name: Postgres | setup apt repo
   become: true
